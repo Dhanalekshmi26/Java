@@ -1,30 +1,24 @@
-public class Nonprimitives {
 
-    // 1. Custom class should be static if used inside main
-    static class Student {
-        String name;
-        int age;
+public class Nonprimitives{
+    static class Student{                     //custom class
+        int marks;
+        String names;
+
     }
+    public static void main(String[] args){
+        String color = "Red";                //string
+        System.out.println(color);
 
-    public static void main(String[] args) {
-        // 2. String example
-        String s = "John";
-        System.out.println(s);
+        int[] c = {2,4,6,8};               //array
+        System.out.println(c);
 
-        // 3. Array example
-        int[] marks = {45, 50, 44, 35, 49, 50};
-        System.out.println(marks);
 
-        // 4. Object creation – corrected syntax
-        Student n = new Student();  // Use 'new' keyword
-        n.name = "Meera";
-        n.age = 21;
-
-        // Print student info
-        System.out.println("Name: " + n.name + ", Age: " + n.age);
+        Student s = new Student();           //object
+        s.marks = 99;
+        s.names = "dhanuu";
+        System.out.println("Name: " + s.names + ", Age: " + s.marks);
     }
 }
-
 
 
 

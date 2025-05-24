@@ -1,4 +1,4 @@
-public class firstprogram {
+public class operators{
     public static void main(String[] args){
         int a = 20;
         int b = 10;
