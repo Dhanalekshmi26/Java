@@ -1,0 +1,17 @@
+This a operator precedence table below:
+
+| Level | Operators                           | Description                       |            |            |
+| ----- | ----------------------------------- | --------------------------------- | ---------- | ---------- |
+| 1     | `()`                                | Parentheses (do these first!)     |            |            |
+| 2     | `++`, `--`, `!`, `~`, unary `+`/`-` | Unary operators                   |            |            |
+| 3     | `*`, `/`, `%`                       | Multiplication, Division, Modulus |            |            |
+| 4     | `+`, `-`                            | Addition, Subtraction             |            |            |
+| 5     | `<`, `>`, `<=`, `>=`                | Relational (comparison)           |            |            |
+| 6     | `==`, `!=`                          | Equality                          |            |            |
+| 7     | `&`                                 | Bitwise AND                       |            |            |
+| 8     | `^`                                 | Bitwise XOR                       |            |            |
+| 9     | \`                                  | \`                                | Bitwise OR |            |
+| 10    | `&&`                                | Logical AND                       |            |            |
+| 11    | \`                                  |                                   | \`         | Logical OR |
+| 12    | `? :`                               | Ternary (conditional)             |            |            |
+| 13    | `=`, `+=`, `-=`, `*=`, etc.         | Assignment                        |            |            |
