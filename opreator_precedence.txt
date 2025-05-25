@@ -1,4 +1,4 @@
-This a operator precedence table below:
+This is a operator precedence table below:
 
 | Level | Operators                           | Description                       |            |            |
 | ----- | ----------------------------------- | --------------------------------- | ---------- | ---------- |
