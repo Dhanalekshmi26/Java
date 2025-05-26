@@ -1,7 +1,8 @@
+
 import java.util.Scanner;
 
-public class patternexample{
-    public static void main(String[] args) {
+public class pattern{
+    public static void main(String[] args) {              
         Scanner sc = new Scanner(System.in);
         int  java   =   sc.nextInt();
         int  cpp    =   sc.nextInt();
@@ -18,12 +19,11 @@ public class patternexample{
 
                             
     }
-}
+}                /*================================
+                    java           100
+                    cpp            065
+                    python         050
+                   ================================*/
+//this is a pattern example 
 
 
-
-
-
-/*java         100 
-cpp            065 
-python         050 */
