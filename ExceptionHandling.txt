@@ -1,0 +1,37 @@
+Exception Handling in Java — dealing with unexpected problems (errors) without crashing the program.
+
+try & catch Block
+Use try to attempt risky code, and catch to handle the error if it happens.
+
+throw Keyword
+You use throw to manually raise an exception.
+
+throws Keyword
+Tells the compiler that this method might throw an exception.
+
+finally Block
+Used to execute code no matter what happens (exception or not).
+
+
+There are two Types of Exception handling in java
+
+# Checked Exceptions : it checks before running program
+
+| Exception                  | When it happens                               |
+| -------------------------- | --------------------------------------------- |
+| **IOException**            | File/network problem (e.g., file not found)   |
+| **SQLException**           | Database problem                              |
+| **FileNotFoundException**  | File missing                                  |
+| **ClassNotFoundException** | Java can't find a class you're trying to use  |
+| **InterruptedException**   | Thread was interrupted (multithreading stuff) |
+
+
+# Unchecked Exceptions : it doesn't check , it show error in runtime 
+
+| Exception                          | When it happens                                                   |
+| ---------------------------------- | ----------------------------------------------------------------- |
+| **ArithmeticException**            | Dividing by zero: `5 / 0`                                         |
+| **NullPointerException**           | Using something that is `null`: `obj.length()` when `obj` is null |
+| **ArrayIndexOutOfBoundsException** | Wrong index: `arr[10]` but size is 5                              |
+| **NumberFormatException**          | Invalid number: `Integer.parseInt("abc")`                         |
+| **IllegalArgumentException**       | Bad argument passed to a method                                   |
