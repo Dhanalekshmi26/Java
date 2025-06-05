@@ -4,6 +4,7 @@ public class methodsofstrings1{
         System.out.println(txt.indexOf("p"));
         System.out.println(txt.lastIndexOf("o"));
         System.out.println(txt.replace("windows","mac"));
+        System.out.println(txt.concat(" pro-version"));
         
     }
 }

@@ -5,6 +5,7 @@ class Animal {
 }
 
 class Dog extends Animal {
+    @Override
     void sound() {
         System.out.println("Dog barks");
     }
@@ -14,7 +15,6 @@ public class methodoverriding {
         
         Animal a = new Dog();  // parent reference, but Dog object
         a.sound();  // OUTPUT: Dog barks ✅
-        
     }
 }
 

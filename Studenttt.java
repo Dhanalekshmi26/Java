@@ -1,6 +1,6 @@
 public class Studenttt{
 
-    private int age;  //hiding data 
+    private int age;                   //hiding data 
 
     public void setage(int a){        //visible method for setting age 
         age = a ;

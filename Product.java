@@ -15,14 +15,15 @@ public class Product {
         this.name = name;
 
     }
-    void showProduct(){
-        System.out.println(id);
-        System.out.println(name);
-    }
+    void showProduct() {
+    System.out.println("Product ID: " + id);
+    System.out.println("Product Name: " + name);
+}
+
 
     
     public static void main(String[] args) {
-        Product po = new Product(31, "ishan");
+        Product po = new Product(31, "colgate paste");
         po.showProduct();
     }
 }
