@@ -1,0 +1,25 @@
+What Are Object Streams?
+
+Object Streams are used to read and write Java objects (not just text or numbers) to files or over a network.
+They are part of Java I/O and allow:
+
+Saving (serializing) objects
+Reading (deserializing) objects
+
+Classes Used in Object Streams:
+
+| Class                | Purpose                    |
+| -------------------- | -------------------------- |
+| `ObjectOutputStream` | Write/save object to file  |
+| `ObjectInputStream`  | Read/load object from file |
+
+
+Notes on Object Streams:
+
+The class must implement Serializable interface (marker interface, no methods inside).
+You can store full objects into files and recreate them later — this is called serialization and deserialization.
+transient keyword can be used to skip a variable from being saved.
+
+
+
+
