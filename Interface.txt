@@ -1,0 +1,42 @@
+ What is an Interface?
+Think of an interface as a contract:
+"If you use me, you must implement these methods."
+
+ Like a TV remote interface — every brand must have the same buttons (methods), but each does it in their own way!
+
+  Implementing an Interface
+->class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+}
+A class must implement all methods of the interface.
+
+Why Use Interfaces?
+
+Achieve 100% abstraction
+Support multiple inheritance (Java doesn’t support it via classes)
+Used in real frameworks, e.g., Spring, Selenium, Android, etc.
+
+Real World Analogy:
+Interface = "USB Port"
+Any device (Mouse, Keyboard, Pendrive) must follow USB rules.
+Even though devices are different, the interface (USB) is common.
+
+interface demo:
+interface Vehicle {
+    void start();
+}
+
+class Car implements Vehicle {
+    public void start() {
+        System.out.println("Car starts with key");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.start();  // Output: Car starts with key
+    }
+}
