@@ -1,0 +1,64 @@
+##  What is **Serialization**?
+
+**Serialization** means **converting a Java object into a stream of bytes**, so it can be:
+
+*  Saved to a file (for later use)
+*  Sent over a network (like between client and server)
+
+###  Real-World Example:
+
+Think of a **student ID card**:
+
+* You (the student object) get your details **written** on a card.
+* That card can be **stored** and **read later**.
+* This is just like serialization: we take your details (name, age, etc.) and save them in a file.
+
+---
+
+##  Deserialization
+
+The opposite of serialization — **reading back** that saved data to recreate the object in memory.
+
+---
+
+##  Java Meaning
+
+In Java:
+
+* Serialization is done using `ObjectOutputStream.writeObject()`
+* Deserialization is done using `ObjectInputStream.readObject()`
+
+But the class must implement the **Serializable** interface.
+
+---
+
+###  Example
+
+```java
+import java.io.*;
+
+class Student implements Serializable {
+    String name = "Dhanalekshmi";
+    int age = 22;
+}
+
+public class Demo {
+    public static void main(String[] args) throws Exception {
+        Student s = new Student();
+
+        // Serialization
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("student.ser"));
+        out.writeObject(s);
+        out.close();
+
+        // Deserialization
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream("student.ser"));
+        Student saved = (Student) in.readObject();
+        in.close();
+
+        System.out.println(saved.name);  
+        System.out.println(saved.age);   
+    }
+}
+
+
