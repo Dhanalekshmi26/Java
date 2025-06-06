@@ -1,0 +1,101 @@
+
+##  Does `Runnable` automatically prevent thread problems?
+
+**No.**
+Just using `Runnable` **does NOT** automatically prevent race conditions or thread problems.
+
+ **You still need synchronization** when multiple threads **share data** — whether you're using `Thread` or `Runnable`.
+
+---
+
+##  Real-World Analogy
+
+Imagine:
+
+* A **Runnable** task is like one exam question paper 
+* You give the same paper to **many students (threads)** to solve at the same time 
+
+If they all write answers on the **same answer sheet** (shared data), then:
+
+*  It gets messy if they write at the same time.
+*  So we need to **let one student write at a time** → This is what **synchronization** does!
+
+---
+
+## 🔧 Example Without Synchronization (Problem!)
+
+```java
+class Counter implements Runnable {
+    int count = 0;
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            count++;  //  Not thread-safe!
+        }
+    }
+}
+
+public class Test {
+    public static void main(String[] args) throws InterruptedException {
+        Counter c = new Counter();
+
+        Thread t1 = new Thread(c);
+        Thread t2 = new Thread(c);
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Count: " + c.count); //  May not be 2000
+    }
+}
+```
+
+### Output:
+
+```
+Count: 1823  (or something wrong)
+```
+
+Why?  Because both threads are **modifying the same variable** at the same time.
+
+---
+
+##  Fix it with Synchronization
+
+```java
+class Counter implements Runnable {
+    int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public void run() {
+        for (int i = 0; i < 1000; i++) {
+            increment();  //  Safe now
+        }
+    }
+}
+```
+
+Now the output will be:
+
+```
+Count: 2000 
+```
+
+---
+
+##  Final Summary
+
+| Concept                | Explanation                                |
+| ---------------------- | ------------------------------------------ |
+| `Runnable` used        |  Just a task — no thread safety by itself  |
+| Shared data            | Needs `synchronized` keyword               |
+| `Thread` or `Runnable` | Both need synchronization for shared stuff |
+| Thread safety?         |  Done manually with `synchronized`         |
+
+
