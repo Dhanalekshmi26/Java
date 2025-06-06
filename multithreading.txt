@@ -1,0 +1,116 @@
+##  What is Multithreading?
+
+Multithreading = running **multiple tasks (threads)** at the same time.
+Java supports this in **two main ways**:
+
+1. `extends Thread`
+2. `implements Runnable`
+
+Both are used for multithreading — just the **style and flexibility** differ.
+
+---
+
+##  Scenario 1: Multithreading using `Thread`
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " is running");
+    }
+}
+
+public class TestThread {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+###  Output:
+
+```
+Thread-0 is running
+Thread-1 is running
+```
+
+ Here:
+
+* You create **two threads**
+* Each thread has its own copy of `run()`
+* Threads are created from a class that **extends Thread**
+
+---
+
+##  Scenario 2: Multithreading using `Runnable`
+
+```java
+class MyTask implements Runnable {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " is working");
+    }
+}
+
+public class TestRunnable {
+    public static void main(String[] args) {
+        MyTask task = new MyTask();
+
+        Thread t1 = new Thread(task);
+        Thread t2 = new Thread(task);
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+###  Output:
+
+```
+Thread-0 is working
+Thread-1 is working
+```
+
+ Here:
+
+* One `Runnable` task is shared
+* Two threads are started with the **same task**
+* This is good when multiple threads need to **do the same job**
+
+---
+
+##  So What’s the Difference?
+
+| Feature           | `extends Thread`                       | `implements Runnable`                    |
+| ----------------- | -------------------------------------- | ---------------------------------------- |
+| Class type        | Thread class itself                    | Runnable task, passed to Thread          |
+| Flexibility       | Less flexible (already extends Thread) | More flexible (can extend other classes) |
+| Task reuse        | No reuse — new class for each thread   |  Reuse same task in multiple threads     |
+| Real-world use    | Small apps, quick test                 |  Best for real projects                  |
+| Memory efficiency | Each thread = new object               |  Shares task object = memory efficient   |
+
+---
+
+##  In Real Projects (like banking, servers, etc.)
+
+* Use `Runnable` because:
+
+  * You can **reuse tasks**
+  * You can easily **share data between threads**
+  * Follows **clean design principles**
+
+---
+
+##  Final Advice:
+
+| Goal                      | Choose                           |
+| ------------------------- | -------------------------------- |
+| Simple, test-like task    | `extends Thread` (quick & dirty) |
+| Scalable, reusable, clean |  `implements Runnable`           |
+
+---
+
+
