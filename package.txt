@@ -1,0 +1,56 @@
+ What is a Package in Java?
+Think of a package as a folder that stores related Java files.
+
+Like: myapp/
+      └── math/
+        └── Calculator.java
+
+
+Why use packages?
+
+Organize code
+Avoid name conflicts
+Protect access (like private/public)
+Reuse code
+
+How to define a package?
+
+package mypackage;  // top of your file
+
+public class Hello {
+    public void sayHi() {
+        System.out.println("Hi from package!");
+    }
+}
+
+
+How to import a package?
+In another file:
+
+import mypackage.Hello;  // use Hello class from mypackage
+
+public class Test {
+    public static void main(String[] args) {
+        Hello obj = new Hello();
+        obj.sayHi();
+    }
+}
+
+
+What is CLASSPATH?
+
+It's a path Java uses to find classes and packages.
+You can set CLASSPATH so Java knows where to look.
+set CLASSPATH = C:\myjava\mypackage
+-> If you don’t set it, Java may say “class not found”.
+
+
+Real Life Example
+Imagine your phone has:
+
+call app
+camera app
+music app
+
+Each is like a package! You import them when needed.
+
