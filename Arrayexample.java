@@ -13,3 +13,4 @@ public class Arrayexample {
 
     }
 }
+//Array : its is collection of elements that store in contigeneus memory and can be acess it using index
