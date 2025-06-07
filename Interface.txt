@@ -1,6 +1,7 @@
  What is an Interface?
-Think of an interface as a contract:
-"If you use me, you must implement these methods."
+An interface in Java is a blueprint that defines a set of abstract methods that a class must implement.
+It is used to achieve abstraction and multiple inheritance in Java
+
 
  Like a TV remote interface — every brand must have the same buttons (methods), but each does it in their own way!
 

@@ -13,13 +13,13 @@ Think of a **student ID card**:
 * That card can be **stored** and **read later**.
 * This is just like serialization: we take your details (name, age, etc.) and save them in a file.
 
----
+
 
 ##  Deserialization
 
 The opposite of serialization — **reading back** that saved data to recreate the object in memory.
 
----
+
 
 ##  Java Meaning
 
@@ -30,11 +30,11 @@ In Java:
 
 But the class must implement the **Serializable** interface.
 
----
+
 
 ###  Example
 
-```java
+java:
 import java.io.*;
 
 class Student implements Serializable {

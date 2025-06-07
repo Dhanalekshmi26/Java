@@ -1,0 +1,31 @@
+A class is a template or blueprint to create objects.
+It can contain variables and methods with actual code.
+
+class Car {
+    void start() {
+        System.out.println("Car is starting...");
+    }
+}
+
+
+An interface is a blueprint of a class that only contains method names (no body).
+It is used to set rules for what a class must do.
+
+interface Vehicle {
+    void start();  // no body
+}
+
+
+Real-World Example (ATM Machine):
+ Interface → ATMInterface
+Says: All ATMs must have withdraw(), checkBalance() methods.
+
+ Class → ICICIATM implements ATMInterface
+It writes actual code: "When withdraw() is called, reduce balance by X."
+
+ Object → new ICICIATM()
+Now you can really use the ATM and perform actions.
+
+working cycle: Interface ➡ (rules) ➡ Class ➡ (real logic) ➡ Object ➡ (access logic)
+
+             ->Interface tells what to do, Class shows how to do it, and Object does it.
