@@ -27,8 +27,8 @@ This repository is dedicated to:
 
 ## 🛠️ Tools
 
-- Language: Java (JDK 17+)
-- IDE: IntelliJ IDEA / Eclipse / VS Code
+- Language: Java (JDK 22)
+- IDE: VS Code
 - Version Control: Git & GitHub
 
 ## 🙌 Contributions
