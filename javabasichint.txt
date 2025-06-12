@@ -1,0 +1,94 @@
+java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+
+###  First Line: `public class HelloWorld {`
+
+####  `public`
+
+* **Meaning**: This keyword means **everyone can access this class**.
+* **Real-world example**: Like a **public park**—anyone can enter.
+* If we used `private`, only certain code parts could use it.
+
+####  `class`
+
+* A **class** is like a **blueprint** or **template**.
+* It’s where we define what something does.
+* **Real-world example**: Think of a **car class**. It tells how every car behaves (drive, brake, honk).
+
+####  `HelloWorld`
+
+* This is the **name of the class**.
+* You can name it anything, but it should match the filename. (File name = `HelloWorld.java`)
+
+
+###  Second Line: `public static void main(String[] args) {`
+
+This is the **main method**. It is the **entry point** of any Java program — like the main door to enter a house.
+
+####  `public`
+
+* Again, it means this method can be accessed by everyone.
+
+####  `static`
+
+* This means you don’t need to **create an object** of the class to run this method.
+* **Real-world example**: You don’t need to build a new remote to use the “Power” button—it works as it is.
+
+####  `void`
+
+* It means this method **does not return any value**.
+* If it returned something (like a number), it would be `int` or `String` instead.
+
+####  `main`
+
+* This is the **starting point** of your program. Java looks for this method and **starts running code** from here.
+
+####  `(String[] args)`
+
+* This means the method takes input from the **command line** (as a list of words/strings).
+* You don’t need to worry about this for now—it’s used for advanced inputs.
+
+
+###  Third Line: `System.out.println("Hello, World!");`
+
+####  `System`
+
+* This is a **built-in class** in Java. It gives access to system things like input/output.
+
+####  `out`
+
+* It's a static object inside `System` that helps with output (like writing to the screen).
+
+####  `println`
+
+* Means **print and go to next line**.
+* `print()` will print on the **same line**, `println()` moves to the next line after printing.
+
+
+
+###  Why start with `public class` and not directly with `main()`?
+
+Because **Java is object-oriented**, meaning everything is **inside a class**.
+
+* You can't write a `main()` function alone—it must be **inside a class**.
+* Think of the class as a **container**, and `main()` as an item inside it.
+
+
+
+###  Summary Table:
+
+| Keyword                | Meaning                             | Real-world Example               |
+| ---------------------- | ----------------------------------- | -------------------------------- |
+| `public`               | Anyone can use it                   | Public library, public park      |
+| `class`                | A template or blueprint             | Car class → makes all cars       |
+| `static`               | Can run without making an object    | TV remote’s power button         |
+| `void`                 | Returns nothing                     | Like a function that just prints |
+| `main`                 | Starting point of the program       | Main door to the house           |
+| `String[] args`        | Accepts input from the command line | Like giving command to an app    |
+| `System.out.println()` | Prints to screen                    | Announcing on a mic              |
+
