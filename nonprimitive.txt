@@ -1,0 +1,9 @@
+|    Type     | Description                            | Size                     | Default Value | Example                        |
+| ----------- | -------------------------------------- | ------------------------ | ------------- | ------------------------------ |
+| `String`    | Sequence of characters (immutable)     | Depends on content       | `null`        | `String s = "Hello";`          |
+| `Array`     | Collection of elements                 | Depends on type & length | `null`        | `int[] a = {1, 2, 3};`         |
+| `Class`     | Blueprint for creating objects         | Reference only           | `null`        | `MyClass obj = new MyClass();` |
+| `Object`    | Parent of all Java classes             | Reference only           | `null`        | `Object o = new Object();`     |
+| `Interface` | Abstract type with methods             | Reference only           | `null`        | `Runnable r = () -> {}`        |
+| `Enum`      | Fixed set of constants (special class) | Reference only           | `null`        | `enum Day {MON, TUE};`         |
+| `Wrapper`   | Object version of primitives           | Reference only           | `null`        | `Integer i = 10;`              |
