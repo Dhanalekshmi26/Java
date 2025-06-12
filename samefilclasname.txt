@@ -1,0 +1,83 @@
+**Class name** and **Java file name**
+
+##  Rule in Java (Very Important):
+
+>  If your class is marked as `**public**`, then the **file name must exactly match the class name** (case-sensitive),
+ and must end in `.java`.
+
+
+
+###  Example: Valid Code
+
+// File name: Hello.java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+    }
+}
+
+
+ This works perfectly because:
+
+* Class name = `Hello`
+* File name = `Hello.java`
+
+
+###  Example: Invalid Code
+
+
+// File name: Test.java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hi!");
+    }
+}
+
+
+❗ This gives error like:
+
+
+Error: class Hello is public, should be declared in a file named Hello.java
+
+
+##  So, What’s the Rule?
+
+| Class Type           | File Name Rule                        |
+| -------------------- | ------------------------------------- |
+| `public class`       |  File name **must match** class name  |
+| **non-public class** |  File name can be **different**       |
+
+
+
+###  Example: Non-Public Class (No Problem)
+
+
+// File name: AnythingYouLike.java
+class Hello {
+    public static void main(String[] args) {
+        System.out.println("No problem!");
+    }
+}
+
+
+ This works because `Hello` is **not public**, so Java doesn’t care about the file name.
+
+
+
+##  Real-Life Example
+
+Think of:
+
+* `public class` = **passport**
+* File name = **passport cover**
+
+If your name on the passport is **"Hello"**, your cover must say **"Hello.java"**.
+If it's a private note (not public), the cover can say **anything**.
+
+
+
+| Class Modifier | Must File Name Match Class Name? | Example                             |
+| -------------- | -------------------------------- | ----------------------------------- |
+| `public`       |  Yes                             | `Hello.java` → `public class Hello` |
+| *not public*   |  No                              | `Test.java` → `class Hello` (okay)  |
+
