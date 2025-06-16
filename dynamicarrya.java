@@ -14,5 +14,7 @@ public class dynamicarrya{
         for(int nums:marks){
             System.out.print(" "+nums);
         }
+        sc.close();
     }
+    
 }
